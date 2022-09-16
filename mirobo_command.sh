@@ -2,16 +2,16 @@
 path2=/vagrant_data/micom
 
 rstart () {
-	mirobo --ip 192.168.1.218 --token 354759454f4c6f446f74506b7a45616f start
+	mirobo --ip ${ip} --token ${token} start
 	echo "$(date '+%D %T') CONDITION MET" >> /var/usage
 }
 
 rstop () {
-	mirobo --ip 192.168.1.218 --token 354759454f4c6f446f74506b7a45616f home
+	mirobo --ip ${ip} --token ${token} home
 }
 
 rinfo () {
-	echo "$(mirobo --ip 192.168.1.218 --token 354759454f4c6f446f74506b7a45616f)"
+	echo "$(mirobo --ip ${ip} --token ${token})"
 }
 
 rlastarea () {
